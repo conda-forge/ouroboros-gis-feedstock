@@ -1,5 +1,5 @@
 {% set name = "ouroboros-gis" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ouroboros_gis-{{ version }}.tar.gz
-  sha256: 2bd672efc8d603559a4693e042d516d146021f6330e0dba15a1e1e266a8a9244
+  sha256: 55e48379abba48e425351e9cbcdb30a82f02b25dabd57218c54bd80db0cb9f76
 
 build:
   noarch: python
