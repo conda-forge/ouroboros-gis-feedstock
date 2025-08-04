@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - fiona
-    - gdal >= 3.8
+    - gdal >=3.8
     - geoarrow-pyarrow
     - geojson
     - geopandas
