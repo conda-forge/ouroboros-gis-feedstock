@@ -1,5 +1,5 @@
 {% set name = "ouroboros-gis" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ouroboros_gis-{{ version }}.tar.gz
-  sha256: 885260ae2ce4f04ad536808926ade57851fe677b8a62239cc71553b16464f273
+  sha256: 40443d09f829d2e72d5690e16318569fdf55a81b3b1b5abe9e60ca037d0402f7
 
 build:
   noarch: python
@@ -22,7 +22,6 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - fiona
     - gdal >=3.8
     - geojson
     - geopandas
