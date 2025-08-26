@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ouroboros_gis-{{ version }}.tar.gz
-  sha256: 
+  sha256: ef2351540fc5fb5087e04abcd574eb04128cf632e0e54dbcce21f0295816969c
 
 build:
   noarch: python
@@ -26,6 +26,7 @@ requirements:
     - geojson
     - geopandas
     - libsqlite >=3.37
+    - matplotlib
     - sqlite >=3.37
     - xmltodict
 
