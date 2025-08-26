@@ -26,7 +26,7 @@ requirements:
     - geojson
     - geopandas
     - libsqlite >=3.37
-    - matplotlib
+    - matplotlib-base
     - sqlite >=3.37
     - xmltodict
 
