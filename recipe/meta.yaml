@@ -1,5 +1,5 @@
 {% set name = "ouroboros-gis" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ouroboros_gis-{{ version }}.tar.gz
-  sha256: 563c407871d16763d5f932b07ba6f4da794a7ec36571bbfcfb037ca45f81ca04
+  sha256: 
 
 build:
   noarch: python
@@ -27,6 +27,7 @@ requirements:
     - geopandas
     - libsqlite >=3.37
     - sqlite >=3.37
+    - xmltodict
 
 test:
   imports:
