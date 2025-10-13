@@ -48,8 +48,10 @@ outputs:
       noarch: python
     requirements:
       run:
-        - {{ pin_subpackage('ouroboros-gis', max_pin="x.x.x") }}
+        - {{ pin_subpackage(name, exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - ouroboros
 
