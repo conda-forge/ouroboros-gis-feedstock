@@ -27,6 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ouroboros-green.svg)](https://anaconda.org/conda-forge/ouroboros) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ouroboros.svg)](https://anaconda.org/conda-forge/ouroboros) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ouroboros.svg)](https://anaconda.org/conda-forge/ouroboros) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ouroboros.svg)](https://anaconda.org/conda-forge/ouroboros) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-ouroboros--gis-green.svg)](https://anaconda.org/conda-forge/ouroboros-gis) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ouroboros-gis.svg)](https://anaconda.org/conda-forge/ouroboros-gis) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ouroboros-gis.svg)](https://anaconda.org/conda-forge/ouroboros-gis) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ouroboros-gis.svg)](https://anaconda.org/conda-forge/ouroboros-gis) |
 
 Installing ouroboros-gis
@@ -39,41 +40,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `ouroboros-gis` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `ouroboros, ouroboros-gis` can be installed with `conda`:
 
 ```
-conda install ouroboros-gis
-```
-
-or with `mamba`:
-
-```
-mamba install ouroboros-gis
-```
-
-It is possible to list all of the versions of `ouroboros-gis` available on your platform with `conda`:
-
-```
-conda search ouroboros-gis --channel conda-forge
+conda install ouroboros ouroboros-gis
 ```
 
 or with `mamba`:
 
 ```
-mamba search ouroboros-gis --channel conda-forge
+mamba install ouroboros ouroboros-gis
+```
+
+It is possible to list all of the versions of `ouroboros` available on your platform with `conda`:
+
+```
+conda search ouroboros --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search ouroboros --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search ouroboros-gis --channel conda-forge
+mamba repoquery search ouroboros --channel conda-forge
 
-# List packages depending on `ouroboros-gis`:
-mamba repoquery whoneeds ouroboros-gis --channel conda-forge
+# List packages depending on `ouroboros`:
+mamba repoquery whoneeds ouroboros --channel conda-forge
 
-# List dependencies of `ouroboros-gis`:
-mamba repoquery depends ouroboros-gis --channel conda-forge
+# List dependencies of `ouroboros`:
+mamba repoquery depends ouroboros --channel conda-forge
 ```
 
 
@@ -98,12 +99,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -130,7 +131,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/ouroboros-gis-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
