@@ -17,7 +17,7 @@ outputs:
   - name: {{ name }}
     build:
       noarch: python
-      script: { { PYTHON } } -m pip install . -vv --no-deps --no-build-isolation
+      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
     requirements:
       host:
@@ -47,7 +47,10 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, exact=True) }}
     test:
       requires:
