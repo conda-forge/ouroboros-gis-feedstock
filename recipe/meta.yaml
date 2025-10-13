@@ -1,5 +1,5 @@
 {% set name = "ouroboros-gis" %}
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -17,18 +17,19 @@ outputs:
   - name: {{ name }}
     build:
       noarch: python
-      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+      script: python -m pip install . -vv
 
     requirements:
       host:
         - python {{ python_min }}
         - setuptools
+        - hatchling
         - pip
       run:
         - python >={{ python_min }}
         - gdal >=3.8
         - geojson
-        - geopandas
+        - geopandas >=1.0
         - libsqlite >=3.37
         - matplotlib-base
         - sqlite >=3.37
@@ -39,6 +40,7 @@ outputs:
         - ouroboros
       commands:
         - pip check
+        - python -c "from osgeo import gdal; print(gdal.__version__)"
       requires:
         - python {{ python_min }}
         - pip
@@ -51,7 +53,7 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
-        - {{ pin_subpackage(name, exact=True) }}
+        - {{ pin_subpackage('ouroboros-gis', max_pin="x.x.x") }}
     test:
       requires:
         - python {{ python_min }}
