@@ -27,6 +27,7 @@ requirements:
     - geopandas
     - libsqlite >=3.37
     - matplotlib-base
+    - pyarrow
     - sqlite >=3.37
     - xmltodict
 
@@ -41,7 +42,7 @@ test:
 
 about:
   home: https://github.com/corbel-spatial/ouroboros
-  summary: Towards more pythonic use of GeoDatabases
+  summary: Pythonic use of GeoDatabases
   license: MIT
   license_file: LICENSE
 
