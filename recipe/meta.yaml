@@ -11,7 +11,7 @@ source:
   sha256: f65d3ddf0a23bd5bbca1ed31095b34482cf52cc601eba5f58d892c72c4cdcb46
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: {{ name }}
@@ -32,6 +32,7 @@ outputs:
         - geopandas >=1.0
         - libsqlite >=3.37
         - matplotlib-base
+        - pyogrio
         - sqlite >=3.37
         - xmltodict
 
