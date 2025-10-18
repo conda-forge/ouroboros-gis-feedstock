@@ -11,35 +11,54 @@ source:
   sha256: f65d3ddf0a23bd5bbca1ed31095b34482cf52cc601eba5f58d892c72c4cdcb46
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
-requirements:
-  host:
-    - python {{ python_min }}
-    - setuptools
-    - pip
-    - hatchling
-  run:
-    - python >={{ python_min }}
-    - gdal >=3.8
-    - geojson
-    - geopandas
-    - libsqlite >=3.37
-    - matplotlib-base
-    - pyarrow
-    - sqlite >=3.37
-    - xmltodict
+outputs:
+  - name: {{ name }}
+    build:
+      noarch: python
+      script: python -m pip install . -vv
 
-test:
-  imports:
-    - ouroboros
-  commands:
-    - pip check
-  requires:
-    - python {{ python_min }}
-    - pip
+    requirements:
+      host:
+        - python {{ python_min }}
+        - setuptools
+        - hatchling
+        - pip
+      run:
+        - python >={{ python_min }}
+        - gdal >=3.8
+        - geojson
+        - geopandas >=1.0
+        - libsqlite >=3.37
+        - matplotlib-base
+        - sqlite >=3.37
+        - xmltodict
+
+    test:
+      imports:
+        - ouroboros
+      commands:
+        - pip check
+        - python -c "from osgeo import gdal; print(gdal.__version__)"
+      requires:
+        - python {{ python_min }}
+        - pip
+
+  - name: ouroboros
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage('ouroboros-gis', max_pin="x.x.x") }}
+    test:
+      requires:
+        - python {{ python_min }}
+      imports:
+        - ouroboros
 
 about:
   home: https://github.com/corbel-spatial/ouroboros
