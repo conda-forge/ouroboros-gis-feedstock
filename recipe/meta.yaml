@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ouroboros_gis-{{ version }}.tar.gz
-  sha256: ef2351540fc5fb5087e04abcd574eb04128cf632e0e54dbcce21f0295816969c
+  sha256: f65d3ddf0a23bd5bbca1ed31095b34482cf52cc601eba5f58d892c72c4cdcb46
 
 build:
   number: 1
@@ -62,7 +62,7 @@ outputs:
 
 about:
   home: https://github.com/corbel-spatial/ouroboros
-  summary: Towards more pythonic use of GeoDatabases
+  summary: Pythonic use of GeoDatabases
   license: MIT
   license_file: LICENSE
 
