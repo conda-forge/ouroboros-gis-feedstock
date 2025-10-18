@@ -7,7 +7,7 @@ Home: https://github.com/corbel-spatial/ouroboros
 
 Package license: MIT
 
-Summary: Towards more pythonic use of GeoDatabases
+Summary: Pythonic use of GeoDatabases
 
 Current build status
 ====================
