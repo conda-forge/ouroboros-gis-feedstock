@@ -27,7 +27,6 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ouroboros-green.svg)](https://anaconda.org/conda-forge/ouroboros) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ouroboros.svg)](https://anaconda.org/conda-forge/ouroboros) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ouroboros.svg)](https://anaconda.org/conda-forge/ouroboros) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ouroboros.svg)](https://anaconda.org/conda-forge/ouroboros) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-ouroboros--gis-green.svg)](https://anaconda.org/conda-forge/ouroboros-gis) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ouroboros-gis.svg)](https://anaconda.org/conda-forge/ouroboros-gis) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ouroboros-gis.svg)](https://anaconda.org/conda-forge/ouroboros-gis) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ouroboros-gis.svg)](https://anaconda.org/conda-forge/ouroboros-gis) |
 
 Installing ouroboros-gis
@@ -40,41 +39,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `ouroboros, ouroboros-gis` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `ouroboros-gis` can be installed with `conda`:
 
 ```
-conda install ouroboros ouroboros-gis
-```
-
-or with `mamba`:
-
-```
-mamba install ouroboros ouroboros-gis
-```
-
-It is possible to list all of the versions of `ouroboros` available on your platform with `conda`:
-
-```
-conda search ouroboros --channel conda-forge
+conda install ouroboros-gis
 ```
 
 or with `mamba`:
 
 ```
-mamba search ouroboros --channel conda-forge
+mamba install ouroboros-gis
+```
+
+It is possible to list all of the versions of `ouroboros-gis` available on your platform with `conda`:
+
+```
+conda search ouroboros-gis --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search ouroboros-gis --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search ouroboros --channel conda-forge
+mamba repoquery search ouroboros-gis --channel conda-forge
 
-# List packages depending on `ouroboros`:
-mamba repoquery whoneeds ouroboros --channel conda-forge
+# List packages depending on `ouroboros-gis`:
+mamba repoquery whoneeds ouroboros-gis --channel conda-forge
 
-# List dependencies of `ouroboros`:
-mamba repoquery depends ouroboros --channel conda-forge
+# List dependencies of `ouroboros-gis`:
+mamba repoquery depends ouroboros-gis --channel conda-forge
 ```
 
 
