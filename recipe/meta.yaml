@@ -46,21 +46,6 @@ outputs:
         - python {{ python_min }}
         - pip
 
-  - name: ouroboros
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python {{ python_min }}
-      run:
-        - python >={{ python_min }}
-        - {{ pin_subpackage('ouroboros-gis', max_pin="x.x.x") }}
-    test:
-      requires:
-        - python {{ python_min }}
-      imports:
-        - ouroboros
-
 about:
   home: https://github.com/corbel-spatial/ouroboros
   summary: Pythonic use of GeoDatabases
